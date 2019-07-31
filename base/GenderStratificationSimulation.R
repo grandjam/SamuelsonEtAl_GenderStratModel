@@ -14,7 +14,7 @@ sfInit(parallel = T, cpus = min(nrow(conds), detectCores()), type = "SOCK")
 id = 1 # Set a unique id for this simulation run; this number will be appended to the file names for all simulation output from this run
 
 # (2) Load model script into local R environment; make sure the file with model code is located in the same directory in which this simulation code is run
-source("GenderStratificationModelFunction_v3_Study1.R")
+source("GenderStratificationModel.R")
 
 # (3) Create experimental conditions to run
 ## Set total number of organizations to simulate for a single run; default is set to simulate 1000 organizations
