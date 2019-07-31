@@ -1,1 +1,2 @@
-
+# Description
+The files in this folder contain the model code, simulation scripts, and data files for the two simulation studies reported in Samuelson et al. The GenderStra script files are identical to those described in base SiRJ. The remaining script files are slightly adapted to accomodate the different response process proposed to be used by respondents when evalauting SJT response optionsn items based on similarity in actions versus perceived consequences as described in the paper. More specifically:
