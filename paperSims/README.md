@@ -2,7 +2,7 @@
 This folder contains all model code, simulation scripts, and data files reported for the two simulation studies in Samuelson et al. The **GenderStratifcationModel_Study1.R** and **GenderStratificationSimulation_Study1.R** script files are identical to those described in the base model. The **GenderStratificationModel_Study2.R** and **GenderStratificationSimulation_Study2.R** script files are similar in functionality, but are slightly altered in terms of how they are initialized. Additonally, folders containing the final simulation data, the initialization data used for Study 2, and the R scripts used to organize and create plots from the simulation data are provided.
 
 # Data files
-The final data files and data files needed to initialize the Study 2 simulations are too large to host on GitHub. As a result, these files have been hosted elsewhere and can be accessed through the following links:
+The final data files for Study 1 and 2 reported in the paper and the data files needed to initialize the Study 2 simulations are too large to host on GitHub, but can be accessed through the following links:
 1. [Final data from simulations](https://www.dropbox.com/sh/pdzof0w4q9d5o2x/AABDE9Ti7zcTkp22qclpokpra?dl=0) -- final aggregated data files from the Study 1 and Study 2 simulations
 2. [Organizational matrix data files](https://www.dropbox.com/sh/0cua80bci46cxs8/AADf9GIIsJQVkCB31JtLKFPLa?dl=0) -- initialization data required for running Study 2 simulations. **IMPORTANT!!** If you intend to replicate the Study 2 simulations from the Samuelson et al. paper, you MUST download all the files from this link to the same directory as the Study 2 model and simuation code.
 
