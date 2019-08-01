@@ -1,22 +1,22 @@
 # Description
 This folder contains all model code, simulation scripts, and data files reported for the two simulation studies in Samuelson et al. The **GenderStratifcationModel_Study1.R** and **GenderStratificationSimulation_Study1.R** script files are identical to those described in the base model. The **GenderStratificationModel_Study2.R** and **GenderStratificationSimulation_Study2.R** script files are similar in functionality, but are slightly altered in terms of how they are initialized. Additonally, folders containing the final simulation data, the initialization data used for Study 2, and the R scripts used to organize and create plots from the simulation data are provided.
 
+# Data files
+The final data files and data files needed to initialize the Study 2 simulations are too large to host on GitHub. As a result, these files have been hosted elsewhere and can be accessed through the following links:
+1. Final data from simulations -- final aggregated data files from the Study 1 and Study 2 simulations
+2. Organizational matrix data -- initialization data required for running Study 2 simulations. **IMPORTANT!!** If you intend to replicate the Study 2 simulations from the Samuelson et al. paper, you MUST download all the files from this link to the same directory as the Study 2 model and simuation code.
+
 # Running simulations
 ## Study 1
 The script file **GenderStratificationSimulation_Study1.R** provides the code for running the Study 1 simulations. The procedure for running this simulation is identical to that described for running the base version of the gender stratification model. See the instructions in the README file located in the base folder of this repository for more information.
 ## Study 2
 The script file **GenderStratificationSimulation_Study2.R** provides the code for running the Study 2 simulations. Running this script generally follows the same procedures as the Study 1 simulation, but differs in the following ways:
 - The values for `externalGender` and `hotJobEffSize` are set to .5 and 0 (respectively) in the `sim` function to represent an organization without any structural biases favoring males
-- The `sim` function used to initialize and simulate a single organization takes an additional argument labeled `orgMat`. This argument expects a data frame in the same structure as that which is output from the base gender stratification model.
+- The `sim` function used to initialize and simulate a single organization takes an additional argument labeled `orgMat`. This argument expects a data frame in the same structure as that output from the base/Study 1 gender stratification model.
 
 The steps below provide an overview of how to run the Study 2 simulations using the provided code:
-1. Download the **GenderStratificationModel_Study2.R**, **GenderStratificationSimulation_Study2.R**, and *ALL* files from the **orgMatData** folder to the same location on your compute. The files in the orgMatData folder are labeled orgMatDat1-10.R. Each of these data files contains a list of data frames describing the final employee data from 1000 of the organizations simulated as part of Study 1. These data are used as the starting values for the simulations in Study 2.
-2. The current simulation setup uses three R packages to facilitate processing speed and data organization. If not already installed on your computer, these should be installed by running the following commands in the R console window:
-```
-install.packages("parallel")
-install.packages("snowfall")
-install.packages("rlecuyer")
-```
+1. Download the **GenderStratificationModel_Study2.R**, **GenderStratificationSimulation_Study2.R**, and *ALL* files from the **orgMatData** folder to the same location on your compute. 
+2. The Study 2 simualations operate by "picking up" where the Study 1 simulations end and then removing all bias from the external hiring and developmental opportunities of those organizations. Consequently, the Study 2 simulations take the output data of Study 1 and use it as input for Study 2. These input data can be found by downloading the relevant **orgMatDat.R** files from the following link. Each of these data files contains a list of data frames describing the final employee data from 1000 of the organizations simulated as part of Study 1. These data must be downloaded in the same working directory as the Study 2 model and simulation scripts.
 3. The simulation is coded to utilize parallel processing. There are two options for running the model in parallel. These options are controlled on lines 11-15 of the code in the GenderStratificationSimulation_Study2.R file. Note that only **one** of these options should be selected.
    - **Option #1:** Use this option to run the model in parallel on your local computer using multiple cores of your computer.  *Note that Option 1 is selected by default*
    - **Option #2:** Use this option to run the model in parallel that will be distributed across cores on multiple computers.
