@@ -5,7 +5,6 @@ This folder contains all model code, simulation scripts, and data files reported
 ## Study 1
 The script file **GenderStratificationSimulation_Study1.R** provides the code for running the Study 1 simulations. The procedure for running this simulation is identical to that described for running the base version of the gender stratification model. See the instructions in the README file located in the base folder of this repository for more information.
 ## Study 2
-# Running simulations
 The script file **GenderStratificationSimulation_Study2.R** provides the code for running the Study 2 simulations. Running this script generally follows the same procedures as the Study 1 simulation, but differs in the following ways:
 - The values for `externalGender` and `hotJobEffSize` are set to .5 and 0 (respectively) in the `sim` function to represent an organization without any structural biases favoring males
 - The `sim` function used to initialize and simulate a single organization takes an additional argument labeled `orgMat`. This argument expects a data frame in the same structure as that which is output from the base gender stratification model.
